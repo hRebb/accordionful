@@ -6,8 +6,10 @@
 
 .accordion-item {
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #BBC0C6;
+  border-radius: 17px;
+  background-color: cornflowerblue;
+  color: rgb(194, 45, 19);
 }
 
 .accordion-title {
@@ -20,7 +22,8 @@
 }
 
 .accordion-title:hover {
-  background-color: #f1f1f1;
+  background-color: #1767c2;
+  border-radius: 17px;
 }
 
 .accordion-title.active {
@@ -35,9 +38,23 @@
 
 .fa-plus:before {
   content: "\f067";
+  color: red;
 }
 
 .fa-minus:before {
   content: "\f068";
 }
 
+h1 {
+  text-align: center;
+  color: rgb(194, 45, 19);
+}
+
+
+body {
+  /* Created with https://www.css-gradient.com */
+  background: #9F69D6;
+  background: -webkit-linear-gradient(right, #9F69D6, #3B5D80);
+  background: -moz-linear-gradient(right, #9F69D6, #3B5D80);
+  background: linear-gradient(to left, #9F69D6, #3B5D80);
+}
