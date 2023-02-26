@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import AccordionItem from "./AccordionItem";
 
-interface AccordionItemProps {
+export interface AccordionItemProps {
     title: string;
     content: string;
 }
 
-interface AccordionMenuProps {
+export interface AccordionMenuProps {
     items: AccordionItemProps[];
-  }
+}
   
   const AccordionMenu = ({ items }: AccordionMenuProps) => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
