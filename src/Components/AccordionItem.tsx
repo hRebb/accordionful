@@ -1,25 +1,31 @@
+import AccordionContent from "./AccordionContent";
+import AccordionTitle from "./AccordionTitle";
+
 interface AccordionItemProps {
+    index: number;
+    active: boolean;
     title: string;
     content: string;
-    isActive: boolean;
-    onTitleClick: () => void;
-}
-
-const AccordionItem = ({
+    onClick: (index: number) => void;
+  }
+  
+  const AccordionItem = ({
+    index,
+    active,
     title,
     content,
-    isActive,
-    onTitleClick,
-}: AccordionItemProps) => {
+    onClick,
+  }: AccordionItemProps) => {
+    const handleItemClick = () => {
+      onClick(index);
+    };
+  
     return (
-        <div className={`accordion-item ${isActive ? "active" : ""}`}>
-            <div className="accordion-title" onClick={onTitleClick}>
-                <i className={`fas ${isActive ? "fa-minus" : "fa-plus"}`} />
-                {title}
-            </div>
-            <div className="accordion-content">{content}</div>
-        </div>
+      <div className="accordion-item">
+        <AccordionTitle title={title} isActive={active} onClick={handleItemClick} />
+        {active && <AccordionContent content={content} />}
+      </div>
     );
-};
-
+  };
+  
 export default AccordionItem;
